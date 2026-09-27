@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2D3878"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="408dp"
+        android:layout_height="723dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblIntro"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/intro_text_size" />
+
+        <TextView
+            android:id="@+id/show_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/count_initial_value"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/count_text_size" />
+
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_count"
+                android:layout_width="201dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#308333"
+                android:onClick="countUp"
+                android:text="@string/btnTxtCountUp" />
+
+            <Button
+                android:id="@+id/button_count2"
+                android:layout_width="205dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#B82743"
+                android:onClick="countDown"
+                android:text="@string/btnTxtCountDown" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
